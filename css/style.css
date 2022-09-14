@@ -137,7 +137,7 @@ footer p a {
 }
 
 #preloader {
-    background: #191f26 url("https://i.pinimg.com/originals/90/80/60/9080607321ab98fa3e70dd24b2513a20.gif");
+    background: #191f26 url("/images/load.gif");
     background-repeat: no-repeat;
     background-size: 30%;
     background-position: center;
@@ -260,6 +260,7 @@ footer p a {
 
     .content h1 {
         margin-top: -7rem;
+        font-size: 5rem;
     }
 
     .auto-type {
