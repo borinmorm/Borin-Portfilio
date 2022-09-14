@@ -197,7 +197,7 @@ main {
 }
 
 #lng-lvl{
-    width: 250px;
+    max-width: 250px;
 }
 
 /* about education */
@@ -335,6 +335,34 @@ footer p a {
 
 /*--------------------For Mobile--------------------*/
 @media only screen and (max-width: 650px) {
+    .info-profile{
+        display: block;
+    }
+
+    .bio-info{
+        margin-left: 0;
+    }
+
+    .list-info-grid{
+        display: block;
+    }
+    .ln-level{
+        display: block;
+    }
+    .edu-place-grid{
+        display: block;
+    }
+    .kno-content-grid{
+        display: block;
+    }
+    .inter-grid{
+        display: block;
+    }
+
+    .profile{
+        margin-bottom: 2rem;
+    }
+
     main {
         margin-top: 5rem;
     }
@@ -421,20 +449,7 @@ footer p a {
     nav ul li a {
         color: #fff;
     }
-
-    .contact-by-grid {
-        display: block;
-    }
-
-    .contact-by {
-        margin-bottom: 3rem;
-
-    }
-
-    .content h1 {
-        font-size: 4rem;
-        margin-top: -7rem;
-    }
+    
 
     .auto-type {
         font-size: 14px;
@@ -450,9 +465,5 @@ footer p a {
 
     footer p {
         margin-bottom: 1rem;
-    }
-
-    .contact-by-grid {
-        margin-bottom: 5rem;
     }
 }
