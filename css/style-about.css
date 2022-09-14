@@ -109,7 +109,7 @@ main {
 /* --------------------loading-------------------- */
 
 #preloader {
-    background: #191f26 url(/images/load.gif);
+    background: #191f26 url(images/load.gif);
     background-repeat: no-repeat;
     background-size: 30%;
     background-position: center;
