@@ -105,7 +105,7 @@ main {
 }
 
 #preloader {
-    background: #191f26 url("https://i.pinimg.com/originals/90/80/60/9080607321ab98fa3e70dd24b2513a20.gif");
+    background: #191f26 url(/images/load.gif);
     background-repeat: no-repeat;
     background-size: 30%;
     background-position: center;
@@ -293,7 +293,7 @@ footer p a {
 /* For Mobile */
 @media only screen and (max-width: 650px) {
     main {
-        margin-top: 5rem;
+        margin-top: 3rem;
     }
 
     .coffee-btn {
@@ -311,8 +311,6 @@ footer p a {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        overflow: hidden;
-
     }
 
     li {
@@ -388,12 +386,12 @@ footer p a {
     }
 
     .content h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
         margin-top: -7rem;
     }
 
     .auto-type {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     main {
@@ -410,5 +408,9 @@ footer p a {
 
     .contact-by-grid {
         margin-bottom: 5rem;
+    }
+
+    .p-message a button {
+        padding: 8px 20px;
     }
 }
