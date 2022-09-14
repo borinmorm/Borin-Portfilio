@@ -136,9 +136,11 @@ footer p a {
     font-size: 20px;
 }
 
-#preloader{
-    background: #191f26 url(../images/loading.gif) no-repeat center;
+#preloader {
+    background: #191f26 url(/images/load.gif);
+    background-repeat: no-repeat;
     background-size: 30%;
+    background-position: center;
     height: 100vh;
     width: 100%;
     position: fixed;
