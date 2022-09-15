@@ -413,4 +413,9 @@ footer p a {
     .p-message a button {
         padding: 8px 20px;
     }
+    
+    .social-icon a i {
+    font-size: 30px;
+    margin-bottom: 3rem;
+    }
 }
