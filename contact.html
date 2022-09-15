@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/94767edb87.js" crossorigin="anonymous"></script>
-    <script src="../javascript/background.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Borin - Contact</title>
 </head>
 <body>
@@ -97,25 +97,72 @@
                 <div class="form-title">
                     <h1>HIRE ME</h1>
                 </div>
-                <form action="https://formsubmit.co/borizmorm@gmail.com" method="POST">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
+                <form onsubmit=" return sender();">
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
                     <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
                     <a href="#" target="_blank"><button type="submit" id="submit">Send</button></a>
                 </form>
             </div>
+            
         </section>
 
         <footer>
             <p><a href="#" onclick="topFunction()" id="t-contact">&#169; 2022 Borin. All rights reserved.</a></p>
         
             <div class="social-icon">
-                <a href="https://t.me/borin_morm" target="_blank" title="telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://t.me/Borinmorm_real" target="_blank" title="telegram"><i class="fa-brands fa-telegram"></i></a>
                 <a href="https://www.linkedin.com/in/borin-morm-946229237/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/borinmorm" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
         </footer>
     </div>
+
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        This is an alert box.
+    </div>
+
+    <!-- <script src="javascript/sender.js"></script> -->
+    <script>
+        //bot token
+            var telegram_bot_id = "5411408313:AAHWZfjN5x6A6McYuPuzOl8OCxPePqEzcZo";
+            //chat id
+            var chat_id = 1176934921;
+            var u_name, email, message;
+            var ready = function () {
+                u_name = document.getElementById("name").value;
+                email = document.getElementById("email").value;
+                message = document.getElementById("message").value;
+                message = "Name: " + u_name + "\nEmail: " + email + "\nMessage: " + message;
+            };
+            var sender = function () {
+                ready();
+                var settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
+                    "method": "POST",
+                    "headers": {
+                        "Content-Type": "application/json",
+                        "cache-control": "no-cache"
+                    },
+                    "data": JSON.stringify({
+                        "chat_id": chat_id,
+                        "text": message
+                    })
+                };
+                $.ajax(settings).done(function (response) {
+                    console.log(response);
+                });
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("message").value = "";
+                window.alert("Message send successfully!");
+                return false;
+            };
+            
+    </script>
 
     <div id="preloader"></div>
 
