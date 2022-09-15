@@ -276,6 +276,10 @@ footer p a {
     footer p{
         margin-bottom: 1rem;
     }
+    .social-icon a i {
+    font-size: 30px;
+    margin-bottom: 3rem;
+    }
 }
 
 
