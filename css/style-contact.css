@@ -203,7 +203,7 @@ form {
 }
 
 form input, textarea{
-    background-color: transparent;
+    background-color: #11111b;
     margin-bottom: 2rem;
     padding: 15px 0;
     border: none;
@@ -215,7 +215,7 @@ form input, textarea{
 form textarea {
     max-height: 150px;
     min-height: 75px;
-    max-width: 400px;
+    max-width: 600px;
     min-width: 200px;
     overflow: auto;
 }
