@@ -209,15 +209,19 @@ form input, textarea{
     border: none;
     border-bottom: 2px solid #fff;
     outline: none;
-    color: #fff;
+    
 }
 
 form textarea {
     max-height: 150px;
     min-height: 75px;
-    max-width: 600px;
+    max-width: 550px;
     min-width: 200px;
-    overflow: auto;
+    color: #fff;
+}
+
+form input::hover {
+    background-color: #11111b;
 }
 
 #submit {
